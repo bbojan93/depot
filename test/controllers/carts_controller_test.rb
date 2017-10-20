@@ -40,7 +40,7 @@ class CartsControllerTest < ActionDispatch::IntegrationTest
 
   test "should destroy cart" do
     post line_item_url, params: { product_id: products(:ruby).id }
-    @cart = Cart.find(session[:cart_id])
+    @cart = Cart.find(session[:cart_idS])
     assert_difference('Cart.count', -1) do
       delete cart_url(@cart)
     end
